@@ -18,7 +18,6 @@ async function generateTypesForVirtualModule(
   for (const [name, schema] of Object.entries(currentSchemasContent)) {
     try {
   const typeCode = await core.generate(name, schema, framework);
-      console.log(`Generated types for ${name}:`, typeCode);
       combined += typeCode + '\n';
     } catch (err) {
       console.error(`Error generating types for ${name}:`, err);
@@ -29,8 +28,6 @@ async function generateTypesForVirtualModule(
     const declarationContent = `declare module '${virtualModuleId}' {
 ${combined}
 }`;
-
-    console.log(`Generated virtual .d.ts content for ${framework}`);
     return declarationContent;
   }
 
@@ -185,8 +182,6 @@ export default function yagOpenApiPlugin(schemaMap: SchemaMap): Plugin {
       }
 
       await writeFile(join(nodeModulesTypesDir, 'index.d.ts'), allDeclarations);
-
-      console.log('Generated TypeScript declaration files');
     } catch (error) {
       console.warn('Could not generate declaration files:', error);
     }

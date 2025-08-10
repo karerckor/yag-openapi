@@ -23,7 +23,7 @@ export class CategoriesController {
 
   @Post()
   @ApiOperation({ summary: 'Create a new category' })
-  @ApiResponse({ status: 201, type: CategoryDto })
+  @ApiResponse({ status: 200, type: CategoryDto })
   create(@Body() createCategoryDto: CreateCategoryDto) {
     return this.categoriesService.create(createCategoryDto);
   }

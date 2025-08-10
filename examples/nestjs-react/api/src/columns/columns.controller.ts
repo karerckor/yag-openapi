@@ -23,7 +23,7 @@ export class ColumnsController {
 
   @Post()
   @ApiOperation({ summary: 'Create a new column' })
-  @ApiResponse({ status: 201, type: ColumnDto })
+  @ApiResponse({ status: 200, type: ColumnDto })
   create(@Body() createColumnDto: CreateColumnDto) {
     return this.columnsService.create(createColumnDto);
   }

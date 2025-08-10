@@ -23,7 +23,7 @@ export class TasksController {
 
   @Post()
   @ApiOperation({ summary: 'Create a new task' })
-  @ApiResponse({ status: 201, type: TaskDto })
+  @ApiResponse({ status: 200, type: TaskDto })
   create(@Body() createTaskDto: CreateTaskDto) {
     return this.tasksService.create(createTaskDto);
   }

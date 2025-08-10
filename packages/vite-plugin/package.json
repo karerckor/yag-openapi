@@ -1,6 +1,6 @@
 {
   "name": "@yag-openapi/vite-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vite plugin for yag-openapi integration.",
   "type": "module",
   "main": "dist/index.js",

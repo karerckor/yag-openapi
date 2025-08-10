@@ -9,6 +9,13 @@ Type-first DX for your client apps with zero runtime overhead. This project turn
 - Import all schema models as TypeScript types from a single virtual package.
 - Regenerate types automatically when schemas change (file or remote sources).
 
+## Demo app
+Nestjs + React example + Tanstack Query Client
+
+```bash
+pnpx gitpick karerckor/yag-openapi/tree/main/examples/nestjs-react fullstack-example
+```
+
 ## Features
 
 - Virtual modules with type-only declarations:

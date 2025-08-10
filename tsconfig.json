@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "paths": {
+      "@yag-openapi/core": ["../core/dist/index"]
+    }
+  },
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/vite-plugin" }
+  ]
+}

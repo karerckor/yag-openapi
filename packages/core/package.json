@@ -1,0 +1,46 @@
+{
+  "name": "@yag-openapi/core",
+  "version": "1.0.0",
+  "description": "Core utilities for yag-openapi.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsc --project tsconfig.json --watch",
+    "prepublishOnly": "npm run build",
+    "test": "vitest",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@elysiajs/eden": "^1.3.2",
+    "@types/js-yaml": "^4.0.9",
+    "hono": "^4.9.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^12.0.0",
+    "js-yaml": "^4.1.0",
+    "openapi-types": "^12.1.3",
+    "ts-morph": "^26.0.0"
+  },
+  "peerDependencies": {
+    "@elysiajs/eden": "^1.3.2",
+    "hono": "^4.9.0"
+  }
+}

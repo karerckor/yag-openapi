@@ -1,0 +1,50 @@
+{
+  "name": "@yag-openapi/vite-plugin",
+  "version": "1.0.0",
+  "description": "Vite plugin for yag-openapi integration.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsc --project tsconfig.json --watch",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "openapi",
+    "yag-openapi"
+  ],
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vite": ">=4.0.0"
+  },
+  "dependencies": {
+    "@yag-openapi/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^1.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.1.1",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^1.0.0"
+  }
+}

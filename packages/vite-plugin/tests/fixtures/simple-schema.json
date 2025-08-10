@@ -1,0 +1,30 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Simple API",
+    "version": "1.0.0"
+  },
+  "host": "simple.api.com",
+  "basePath": "/api",
+  "paths": {
+    "/ping": {
+      "get": {
+        "summary": "Health check",
+        "operationId": "ping",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
